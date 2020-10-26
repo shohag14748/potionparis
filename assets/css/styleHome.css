@@ -1036,7 +1036,7 @@
 
     .heroSection .carouselContent{
         padding-top: 10px;
-        padding-bottom: 98vw;
+        padding-bottom: 140vw;
     }
     .heroSection .carouselContent h1{
         font-size: 24px;
@@ -1049,12 +1049,16 @@
 }
 
     .heroSection .carouselContent p{
-        margin-top: 10px;font-size: 13px
+        margin-top: 10px;font-size: 13px;
+        max-width: 280px;
+        margin-bottom: 10px;
     }
     .heroSection .carouselContent a {
     padding: 5px 30px 4px;
         font-size: 16px;
         margin: 0px;
+        margin-left: 20px;
+        margin-top: 10px;
 }
     .heroSection .carouselContent .imgGroup{
         position: absolute;
@@ -1062,7 +1066,7 @@
         justify-content: center;
         width: 100%;
         left: 0;
-        padding: 20px;
+        padding: 12px 20px;
         background-color: rgba(187,145,150,.69)
             
     }
@@ -1072,6 +1076,16 @@
     .heroSection .carouselContent .imgGroup img:last-child{
         height: 60px;
         margin-left: 15px;
+    }
+    .topTextBgWB{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .topTextBg{
+        padding: 20px 20px 1px;
+        background-color: rgba(187,145,150,.20);
     }
     
     .howItWork .sectionTitle h1{
