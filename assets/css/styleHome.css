@@ -131,7 +131,6 @@
 .workType .workText p {
     margin-top: 20px;
     font-size: 15px;
-    font-weight: 700;
     line-height: 20px
 }
 
@@ -477,11 +476,11 @@
 
     .mostPropular .detailBox .title h4 {
         margin-bottom: 10px;
-        font-size: 27px;
+        font-size: 23px;
     }
 
     .mostPropular .detailBox .title h5 {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .mostPropular .detailBox .ratingPricing {
@@ -1037,7 +1036,7 @@
 
     .heroSection .carouselContent{
         padding-top: 10px;
-        padding-bottom: 80vw;
+        padding-bottom: 98vw;
     }
     .heroSection .carouselContent h1{
         font-size: 24px;
@@ -1068,10 +1067,10 @@
             
     }
     .heroSection .carouselContent .imgGroup img{
-        height: 70px
+        height: 60px
     }
     .heroSection .carouselContent .imgGroup img:last-child{
-        height: 65px;
+        height: 60px;
         margin-left: 15px;
     }
     
