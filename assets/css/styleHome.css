@@ -16,6 +16,9 @@
     margin-bottom: 0;
     font-size: 32px;
 }
+.heroSection .carouselContent h1 br{
+    display: none;
+}
 
 .heroSection .carouselContent h3 {
     font-weight: 500;
@@ -956,6 +959,7 @@
 
 @media (max-width:768px) {
 
+
     .container {
         max-width: 100%;
         overflow: hidden;
@@ -1021,16 +1025,56 @@
 }
 
 @media (max-width:500px) {
-    
+
+    .heroSection {
+    background-image: url(../img/banner_img_mobile.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color: #fff;
+        position: relative;
+}
+
     .heroSection .carouselContent{
-        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 80vw;
     }
+    .heroSection .carouselContent h1{
+        font-size: 24px;
+    }
+    .heroSection .carouselContent h3{
+        font-size: 17px;
+    }
+    .heroSection .carouselContent h1 br{
+    display: block;
+}
+
     .heroSection .carouselContent p{
-        margin: auto;
+        margin-top: 10px;font-size: 13px
     }
+    .heroSection .carouselContent a {
+    padding: 5px 30px 4px;
+        font-size: 16px;
+        margin: 0px;
+}
     .heroSection .carouselContent .imgGroup{
+        position: absolute;
+        bottom: 0;
         justify-content: center;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        background-color: rgba(187,145,150,.69)
+            
     }
+    .heroSection .carouselContent .imgGroup img{
+        height: 70px
+    }
+    .heroSection .carouselContent .imgGroup img:last-child{
+        height: 65px;
+        margin-left: 15px;
+    }
+    
     .howItWork .sectionTitle h1{
         font-size: 20px;
     }
