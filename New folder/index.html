@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <title>Hello, world!</title>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <style>
+        header .headertop{
+            text-align: center;padding: 10px 20px;
+            background: #000;
+        }
+        header .headertop p{
+            color: #fff;
+            letter-spacing: 1px;
+            font-size: 14px;
+            text-transform: uppercase
+        }
+        header .mainMenu{
+            display: flex;justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            border-bottom: 1px solid #e9e9e9;
+        }
+        header .mainMenu .menu{
+            display: flex;
+            justify-content: center;
+        }
+        header .mainMenu ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            margin: 0;
+        }
+        header .mainMenu .menu-toggler{
+            display: block;
+            padding: 15px 8px !important;
+            margin-right: 10px;
+        }
+        header .mainMenu .menu-toggler .toggler-icon{
+            display: block;
+            height: 2px;
+            width: 18px;
+            background: #000;
+            position: relative;
+        }
+        header .mainMenu .menu-toggler .toggler-icon::after,
+        header .mainMenu .menu-toggler .toggler-icon::before{
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #000;
+            top: 8px;
+            position: absolute
+        }
+        header .mainMenu .menu-toggler .toggler-icon::after{
+            top: auto;
+            bottom: 8px;
+        }
+        header .mainMenu .nav-item svg{
+            width: 25px;
+            stroke:#000
+        }
+        header .mainMenu .rightItem{
+            width: 80px;
+            justify-content: flex-end;
+        }
+        header .mainMenu .leftItem{
+            width: 80px;
+        }
+        header .mainMenu .rightItem .nav-item .nav-link,
+        header .mainMenu .leftItem .nav-item .nav-link{
+            padding: 5px;
+        }
+        header .mainMenu .menu .rightPart,
+        header .mainMenu .menu .leftPart{
+            width: 315px;
+        }
+        header .mainMenu .menu .logo{
+            padding: 10px 40px;
+        }
+        header .mainMenu .menu .logo img{
+            width: 140px;
+        }
+        header .mainMenu .menu .nav-item{
+            padding: 0 18px;
+        }
+        header .mainMenu .menu .nav-link{
+            font-size: 14px;
+            color: #000;
+            position: relative;
+            padding: 5px 0;
+        }
+        header .mainMenu .menu .nav-link::after{
+            content: '';
+            height: 2px;
+            width: 0%;
+            position: absolute;
+            bottom: 0;
+            background: #000;
+            right: 0;
+            transition: .3s ease;
+        }
+        header .mainMenu .menu .nav-link:hover::after{
+            width: 100%;
+            left: 0;right: auto;
+        }
+        
+        @media (max-width:1200px){
+            header .mainMenu{
+                padding: 15px;
+            }
+            header .mainMenu .menu .logo{
+                padding: 10px 20px;
+            }
+            header .mainMenu .menu .nav-item{
+                padding: 0 15px;
+            }
+            header .mainMenu .menu .rightPart,
+            header .mainMenu .menu .leftPart{
+                width: 296px;
+            }
+        }
+        @media (max-width:991px){
+            header .mainMenu{
+                padding: 10px 15px;
+            }
+            header .mainMenu .menu ul{
+                display: none;
+            }
+            header .mainMenu .menu .logo{
+                padding: 5px 20px;
+            }
+            header .mainMenu .menu .logo img{
+                width: 120px;
+            }
+        }
+        @media (max-width:768px){
+            header .headertop p{
+                font-size: 12px;
+            }
+        }
+        @media (max-width:500px){
+            header .headertop p{
+                font-size: 9px;
+            }
+        }
+        header .mobile-menu{
+            position: fixed;
+            height: 100vh;
+            width: 300px;
+            background: #fff;
+            z-index: 9999;
+            top: 0;
+            left: -300px;
+            transition: .3s ease;
+        }
+        header .mobile-menu.active{
+            left: 0;
+        }
+        header .mobile-menu .nav{
+            flex-direction: column;
+            margin-top: 60px;
+            border-top: 1px solid #e9e9e9;
+        }
+        header .mobile-menu .nav li a{
+            padding: 15px 20px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-bottom: 1px solid #e9e9e9;
+            color: #000;
+        }
+        header .mobile-menu .close{
+            font-size: 15px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .menu-bg{
+            position: fixed;
+            width: 100%;height: 100%;
+            display: block;
+            background: rgba(255,255,255,.6);
+            z-index: -9991;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .4s ease;
+        }
+        .menu-bg.active{
+            pointer-events: all;
+            opacity: 1;
+            z-index: 9991;
+        }
+    </style>
+</head>
+
+<body>
+   <header>
+       <div class="headertop">
+           <p>Stay safe and healthy. Please wash your hands and practise social distancing. Free delivery over £50 to UK.</p>
+       </div>
+       <div class="mainMenu">
+           <ul class="leftItem">
+              <li class="nav-item">
+                   <a href="" class="menu-toggler nav-link">
+                    <span class="toggler-icon"></span>
+                   </a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                   <a href="" class="search nav-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                   </a>
+              </li>
+           </ul>
+           <div class="menu">
+               <ul class="leftPart">
+                   <li class="nav-item"><a href="" class="nav-link">THE BRAND</a></li>
+                   <li class="nav-item"><a href="" class="nav-link">FRAGRANCES</a></li>
+                   <li class="nav-item"><a href="" class="nav-link">SHOP</a></li>
+               </ul>
+               <div class="logo">
+                   <a href=""><img src="assets/img/logo.svg" alt=""></a>
+               </div>
+               <ul class="rightPart">
+                   <li class="nav-item"><a href="" class="nav-link">THE VIALS</a></li>
+                   <li class="nav-item"><a href="" class="nav-link">SAMPLES</a></li>
+                   <li class="nav-item"><a href="" class="nav-link">CONTACT</a></li>
+               </ul>
+           </div>
+           <ul class="rightItem">
+               <li class="nav-item d-none d-lg-block">
+                   <a href="" class="user nav-link">
+                       <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-user" viewBox="0 0 64 64"><g fill="none" stroke="#000" stroke-width="2"><path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"></path></g></svg>
+                   </a>
+               </li>
+               <li class="nav-item d-block d-lg-none">
+                   <a href="" class="search nav-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                   </a>
+              </li>
+               <li class="nav-item">
+                   <a href="" class="cart nav-link">
+                       <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-bag" viewBox="0 0 64 64"><g fill="none" stroke="#000" stroke-width="2"><path d="M25 26c0-15.79 3.57-20 8-20s8 4.21 8 20"></path><path d="M14.74 18h36.51l3.59 36.73h-43.7z"></path></g></svg>
+                   </a>
+               </li>
+           </ul>
+       </div>
+       <div class="mobile-menu">
+          <div class="close"><i class="fas fa-times"></i></div>
+           <ul class="nav">
+               <li class="nav-item"><a href="" class="nav-link">THE BRAND</a></li>
+               <li class="nav-item"><a href="" class="nav-link">FRAGRANCES</a></li>
+               <li class="nav-item"><a href="" class="nav-link">SHOP</a></li>
+               <li class="nav-item"><a href="" class="nav-link">THE VIALS</a></li>
+               <li class="nav-item"><a href="" class="nav-link">SAMPLES</a></li>
+               <li class="nav-item"><a href="" class="nav-link">CONTACT</a></li>
+           </ul>
+       </div>
+       <span class="menu-bg"></span>
+   </header>
+   
+   
+    <section class="productDetails">
+        <div class="container">
+            <div class="row">
+                <div class="colfix col-lg-6">
+                    <!-- Swiper -->
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic6.jpg" alt=""></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button"><i class="fas fa-chevron-right"></i></div>
+                        <div class="swiper-button-prev swiper-button"><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/productImg/Pic6.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="productItemDetails">
+                        <p class="info">THE ULTIMATE WAY TO START YOUR JOURNEY</p>
+                        <div class="prductHeading">
+                            <h3>THE COLLECTION SET</h3>
+                            <div class="productReview">
+                                <div class="IconBox">
+                                    <img src="assets/img/rating_img.png" alt="">
+                                    <img src="assets/img/rating_img.png" alt="">
+                                    <img src="assets/img/rating_img.png" alt="">
+                                    <img src="assets/img/rating_img.png" alt="">
+                                    <img src="assets/img/rating_img.png" alt="">
+                                </div>
+                                <p>Based on 426 reviews</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <h5>£99.99 <span>USUAL PRICE: £129.99</span></h5>
+                        </div>
+                        <div class="paymentby">
+                            <div class="bank">
+                                <p>
+                                    or make 4 interest-free payments of £25.00 GBP fortnightly with <br>
+                                    <strong>More info</strong>
+                                </p>
+                                <img src="assets/img/clearpay-logo.png" alt="">
+                            </div>
+                            <div class="bank">
+                                <p>
+                                    or 6 weekly interest-free payments from £16.66 with<br>
+                                    <strong>what's this?</strong>
+                                </p>
+                                <img src="assets/img/laboratory_logo.png" alt="">
+                            </div>
+                        </div>
+                        <p class="description">All 7 luxurious, cruelty-free and toxin free eau de parfum from our Collection No.1 and the exquisite and refillable Iconic Vial in your choice of Rose Gold or Black. Beautifully presented in our stunning gift set box, The Collection Set from Potion Paris is undoubtedly the perfect gift for your loved ones, or to yourself.</p>
+                        <div class="variation">
+                            <h5>ICONIC VIAL: <span>ROSE GOLD</span></h5>
+                            <div class="imgBox">
+                                <img class="active" src="assets/img/VariationThumbnail1.png" alt="">
+                                <img src="assets/img/VariationThumbnail2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="include">
+                            <div class="imgBox">
+                                <img src="assets/img/includeImage.png" alt="">
+                                <div class="ratio">
+                                    <p>70ml (7x10ml)</p>
+                                </div>
+                            </div>
+                            <ol>
+                                <li>The Iconic Vial (Rose Gold or Black)</li>
+                                <li>Luxurious Cylinder Vial case</li>
+                                <li>Entire Collection No.1 (7 fragrances)</li>
+                                <li>Beautiful gift display box</li>
+                            </ol>
+                        </div>
+                        <div class="addToCart">
+                            <form action="">
+                                <div class="quantityCheckBox">
+                                    <button>-</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                                <div class="addToCartButton">
+                                    <button type="submit">Add To Bag</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="socialIcon">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i></a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i></a>
+                            <a href="#">
+                                <i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Collection Section Start -->
+    <section class="collectionIncluded">
+        <div class="sectionTitle">
+            <h1>WHAT’S INCLUDED</h1>
+        </div>
+        <div class="container">
+            <div class="sectionDesc">
+                <img src="assets/img/colllection_brandIcon.png" alt="">
+                <h3>7 X 10ML COLLECTION NO.1</h3>
+                <p>Rare ingredients, daring olfactory statements and creation that knows no bounds. This collection reflects the freedom that only true luxury can provide. All our fragrances come in convenient 10ml refills, that fit perfectly inside our opulent and patented Iconic Vials.</p>
+            </div>
+            <div class="flexItem row">
+                <div class=" col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img1.jpg" alt="">
+                                <div class="overlay">
+                                    <p>A Potion for women that embodies the addiction of true loves. Made with dazzling raw materials: a burning heart of Rose Essence, inflamed by the sensuous addiction of Bourbon Vanilla and intensified by smouldering Patchouli Essence.</p>
+                                    <ul class="tag">
+                                        <li>T: Pomegranate, Bergamot, Peony</li>
+                                        <li>H: Rose, Jasmine, Peach</li>
+                                        <li>B: Sandalwood, Vanilla, Musk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>PEONY & NUTMEG</h5>
+                            <h4>ADDICTION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img2.jpg" alt="">
+                                <div class="overlay">
+                                    <p>Enveloping sensuality and seduction, with warm, rich and woody depths. Creation is inspired by modern women - strong, empowered, beautiful, seductive and alluring with a mysterious sense of confident sensuality.</p>
+                                    <ul class="tag">
+                                        <li>T: Orange, Pear, green notes</li>
+                                        <li>H: White flower, Orchid, Toffee</li>
+                                        <li>B: Vanilla, Praline, Musk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>VANILLA & MUSK</h5>
+                            <h4>CREATION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img3.jpg" alt="">
+                                <div class="overlay">
+                                    <p>Created from a thriving garden of flowers, its radiant notes of natural tuberose and jasmine create an unexpectedly rich white floral scent on the skin. With Rangoon creeper infusing a powdery floral edge to the fragrance.</p>
+                                    <ul class="tag">
+                                        <li>T: Ginger, Rose</li>
+                                        <li>H: Jasmine bud, Rangoon creeper, Tuberose</li>
+                                        <li>B: Patchouli, Musk, Osmanthus</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>JASMINE & PATCHOULI</h5>
+                            <h4>DECEPTION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img4.jpg" alt="">
+                                <div class="overlay">
+                                    <p>Made with the most precious natural ingredients, expressing notes of iris, patchouli, praline, and vanilla, this feminine, complex scent is the modern interpretation of an oriental fragrance with a twist of gourmand.</p>
+                                    <ul class="tag">
+                                        <li>T: Bergamot, Grapefruit, Pink pepper, pear</li>
+                                        <li>H: Jasmine, Orange flower, Chypre accord</li>
+                                        <li>B: Vanilla, Patchouli, Cedarwood, Musk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>WHITE FLOWER & PATCHOULI</h5>
+                            <h4>DEVOTION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img5.jpg" alt="">
+                                <div class="overlay">
+                                    <p>A Potion so delightfully intoxicating one falls immediately in love. Seductive, warm, strong and reassuring all at once. A powdery fragrance centered on vanilla, surrounded by cedar wood on a background of musk and dry wood.</p>
+                                    <ul class="tag">
+                                        <li>T: Citrus, Plum, Bergamot</li>
+                                        <li>H: Vanilla, Toffee, Tonka bean, Coumarine</li>
+                                        <li>B: Musk, Almond, Praline, Amber, Balsamic</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>AMBER, PRALINE & WOOD</h5>
+                            <h4>SEDUCTION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img6.jpg" alt="">
+                                <div class="overlay">
+                                    <p>This woody, sensual potion captures the danger and seduction of the midnight hour. The hallmark is a unique blend of luxurious amber and invigorating patchouli built around the complexity and deepness of oud wood.</p>
+                                    <ul class="tag">
+                                        <li>T: Lime, Plum, Saffron, Rose</li>
+                                        <li>H: Agarwood, Incense, Amber, Lavender</li>
+                                        <li>B: Cedar wood, Patchouli, Vetiver, Musk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>PRECIOUS OUD & ORIENTAL</h5>
+                            <h4>SENSATION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="collectionItem">
+                        <div class="collectionTop">
+                            <div class="img">
+                                <img src="assets/img/collection_img7.jpg" alt="">
+                                <div class="overlay">
+                                    <p>A tribute to beauty and femininity combining radiant rose and sophisticated musk notes. A composition focused on the tantalizing scent of pomegranate combined with aromas of rose and jasmine, supported by musk, creamy sandalwood and olibanum.</p>
+                                    <ul class="tag">
+                                        <li>T: Pomegranate, Bergamot, Peony</li>
+                                        <li>H: Rose, Jasmine, Peach</li>
+                                        <li>B: Sandalwood, Vanilla, Musk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collectionText">
+                            <h5>ROSE, PEONY & WOOD</h5>
+                            <h4>TEMPTATION</h4>
+                            <p>EAU DE PARFUM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--    Collection section End   -->
+
+    <!--Iconic Viol Section Start-->
+
+    <section class="iconicViol">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="iconicViolInner">
+                        <div class="row">
+                            <div class="col-lg-6"></div>
+                            <div class="col-lg-6">
+                                <div class="details">
+                                    <h2>THE ICONIC VIAL</h2>
+                                    <p>
+                                        As if sculpted by light itself, our design patented ® elegant Crystal-Shaped vial is completely unique. Faceted like a diamond it really is a true gem: at first glance, it seems simple yet with a closer look it reveals its complexity. Its sophisticated structure and its symmetrical design create impressive glints… as if it had been sculpted from light. Availabe in your choice of:</p>
+                                    <div class="thumbnail">
+                                        <div class="imgBox">
+                                            <img src="assets/img/Iconic_viol_thumbnail1.jpg" alt="">
+                                            <p>Black</p>
+                                        </div>
+                                        <div class="imgBox">
+                                            <img src="assets/img/Iconic_viol_thumbnail2.jpg" alt="">
+                                            <p>ROSE GOLD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Iconic Viol Section End-->
+    <!--    How to Refil section Start-->
+    <section class="howToRefil">
+        <div class="container">
+            <div class="sectionTitle">
+                <h3>HOW TO REFILL YOUR ICONIC VIAL</h3>
+                <p>Reinventing the tradition of perfume fountains born in the 18th century. Our 10ml refillable fragrances which slot inside our iconic Vials, took inspiration from the exquisite perfume bottles of historic major perfume houses, often designed by famous Crystal Engravers, which were refilled as desired with their original fragrance.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-6">
+                    <div class="imgBox">
+                        <img src="assets/img/how_to_refil_img1.jpg" alt="">
+                        <p>1. Take your Iconic Vial</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="imgBox">
+                        <img src="assets/img/how_to_refil_img2.jpg" alt="">
+                        <p>2. Select your Potion Fragrance Refill</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="imgBox">
+                        <img src="assets/img/how_to_refil_img3.jpg" alt="">
+                        <p>3. Unscrew studded neck anti-clockwise</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="imgBox">
+                        <img src="assets/img/how_to_refil_img4.jpg" alt="">
+                        <p>4. Insert your Fragrance Refill</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="imgBox">
+                        <img src="assets/img/how_to_refil_img5.jpg" alt="">
+                        <p>5. Screw on studded neck clockwise</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="imgBox">
+                        <img src="assets/img/how_to_refil_img6.jpg" alt="">
+                        <p>6. Spritz in style</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    How to Refil section End-->
+
+    <!--    one tree planet section Start-->
+    <section class="onTreePlanet">
+        <div class="container">
+            <div class="innerItem">
+                <div class="row">
+                    <div class="col-lg-5">
+                       <img class="w-100 d-lg-none d-block" src="assets/img/planter_bg_mobile.jpg" alt="">
+                        <img class="brandImg" src="assets/img/planter_icon1.png" alt="">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="planterDetails">
+                            <h2>ONE TREE PLANTED</h2>
+                            <p>In association with our partner One Tree Planted, we promise to plant one tree with this puchase. Trees help clean the air we breathe, filter the water we drink, and provide habitat to over 80% of the world's terrestrial biodiversity.</p>
+                            <div class="planetLogoBox">
+                            <p>In association with</p>
+                            <img src="assets/img/planter_icon2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutProduct">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="bg paddingfix col-lg-6">
+                    <div class="aboutImg2">
+                        <img src="assets/img/about_product_img2.jpg" alt="">
+                    </div>
+                    <div class="verticlImg">
+                        <img class="" src="assets/img/colllection_brandIconV.png" alt="">
+                    </div>
+                    <div class="innerTextL">
+                        <div class="headingL">
+                            <h2>CRUELTY-FREE, TOXIN-FREE & SUSTAINABLE</h2>
+                            <img src="assets/img/logo_peta.png" alt="">
+                        </div>
+                        <p>Sourced and composed using rare, precious, ethically farmed and sustainable ingredients from around the world. We are completely cruelty free with no animal testing. By being toxin free we ensure there are no parabens and phthalates which are among the top “dirty ingredients” in the beauty industry in our scents.</p>
+                        <img  class="collectionWhite" src="assets/img/colllection_brandIcon_white.png" alt="">
+                    </div>
+                </div>
+                <div class="paddingfix col-lg-6">
+                    <div class="innerText">
+                        <div class="heading">
+                            <img src="assets/img/icon_cycle.png" alt="">
+                            <h1>RETURN. REFILL. REPEAT</h1>
+                        </div>
+                        <p> All our fragrances come in handcrafted 10ml refills that fit perfectly into our patented Iconic vials. Return, Refill, Repeat is our sustainable concept that encourages the return of the 10ml refills to be cleaned, sanitised and reused.</p>
+                        <p>A sustainable program that encourages the return of the empty refills by rewarding you with a free fragrance refill (2x10ml) of your choice (when you send back 10 empty refills).</p>
+                    </div>
+                    <div class="aboutImg">
+                        <img src="assets/img/about_product_img1.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    review section start  -->
+    <section class="reviews">
+        <div class="container">
+            <h2>CUSTOMER REVIEWS</h2>
+            <p>I absolutely love the concept from Potion Paris. Never seen anything like it, makes sense to me to get refills for your favourite perfumes.</p>
+            <p>I love the packaging, very stylish.
+                I initially bought the sample set, 7 fragrances to try, very difficult to choose my favourite. I have it down to 3 so will be ordering again soon. The fragrances are lovely, and linger beautifully on your skin, I’ve had many compliments and questions about them. Highly recommend trying them!</p>
+            <div class="ratingStar">
+                <img src="assets/img/rating_img.png" alt="">
+                <img src="assets/img/rating_img.png" alt="">
+                <img src="assets/img/rating_img.png" alt="">
+                <img src="assets/img/rating_img.png" alt="">
+                <img src="assets/img/rating_img.png" alt="">
+            </div>
+            <p class="author">Lorna P.</p>
+        </div>
+    </section>
+
+    <footer class="footerArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="details">
+                        <div class="title">
+                            <p>DOWN FOR MORE? WE GOT YOU.</p>
+                        </div>
+                        <div class="links">
+                        <p class="about">All the latest potions limited offers event info-straight into your box.</p>
+                        <div class="inputGroup">
+                            <form action="">
+                                <input type="text" placeholder="Enter Your Email">
+                                <button type="submit">
+                                    <img src="assets/img/mail.png" alt=""></button>
+                            </form>
+                        </div>
+                        <div class="socialIcon">
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <div class="dropdown">
+                                <a href="#" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/img/gbp.png" alt="">GBP</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#"><img src="assets/img/eur.png" alt="">EUR</a>
+                                    <a class="dropdown-item" href="#"><img src="assets/img/gbp.png" alt="">GBP</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="title">
+                        <p>SHOP</p>
+                    </div>
+                    <ul class="links">
+                        <li><a href="#">Fragrances</a></li>
+                        <li><a href="#">Iconic Vials</a></li>
+                        <li><a href="#">Shop All</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="title">
+                        <p>CUSTOMER SERVICES</p>
+                    </div>
+                    <ul class="links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Pay Later With Laybuy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="title">
+                        <p>ABOUT</p>
+                    </div>
+                    <ul class="links">
+                        <li><a href="#">The Brand</a></li>
+                        <li><a href="#">Return Refill Repeat</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Cookie Policy</a></li>
+                        <li><a href="#">One Tree Planted</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">© 2020 Potion Paris</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.footerArea .title').click(function(){
+                $(this).siblings().slideToggle();
+            })
+            $('.menu-toggler').click(function(e){
+                e.preventDefault();
+                $('.mobile-menu,.menu-bg').addClass('active');
+            })
+            $('.mobile-menu .close,.menu-bg').click(function(e){
+                e.preventDefault();
+                $('.mobile-menu,.menu-bg').removeClass('active');
+            })
+        })
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 6,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            }
+        });
+    </script>
+</body></html>

@@ -69,199 +69,7 @@ p {
     margin-bottom: 0;
 }
 
-header .headertop{
-            text-align: center;padding: 10px 20px;
-            background: #000;
-        }
-        header .headertop p{
-            color: #fff;
-            letter-spacing: 1px;
-            font-size: 14px;
-            text-transform: uppercase
-        }
-        header .mainMenu{
-            display: flex;justify-content: space-between;
-            align-items: center;
-            padding: 15px 25px;
-            border-bottom: 1px solid #e9e9e9;
-        }
-        header .mainMenu .menu{
-            display: flex;
-            justify-content: center;
-        }
-        header .mainMenu ul{
-            display: flex;
-            list-style: none;
-            align-items: center;
-            margin: 0;
-        }
-        header .mainMenu .menu-toggler{
-            display: block;
-            padding: 15px 8px !important;
-            margin-right: 10px;
-        }
-        header .mainMenu .menu-toggler .toggler-icon{
-            display: block;
-            height: 2px;
-            width: 18px;
-            background: #000;
-            position: relative;
-        }
-        header .mainMenu .menu-toggler .toggler-icon::after,
-        header .mainMenu .menu-toggler .toggler-icon::before{
-            content: '';
-            width: 100%;
-            height: 2px;
-            background: #000;
-            top: 8px;
-            position: absolute
-        }
-        header .mainMenu .menu-toggler .toggler-icon::after{
-            top: auto;
-            bottom: 8px;
-        }
-        header .mainMenu .nav-item svg{
-            width: 25px;
-            stroke:#000
-        }
-        header .mainMenu .rightItem{
-            width: 80px;
-            justify-content: flex-end;
-        }
-        header .mainMenu .leftItem{
-            width: 80px;
-        }
-        header .mainMenu .rightItem .nav-item .nav-link,
-        header .mainMenu .leftItem .nav-item .nav-link{
-            padding: 5px;
-        }
-        header .mainMenu .menu .rightPart,
-        header .mainMenu .menu .leftPart{
-            width: 315px;
-        }
-        header .mainMenu .menu .logo{
-            padding: 10px 40px;
-        }
-        header .mainMenu .menu .logo img{
-            width: 140px;
-        }
-        header .mainMenu .menu .nav-item{
-            padding: 0 18px;
-        }
-        header .mainMenu .menu .nav-link{
-            font-size: 14px;
-            color: #000;
-            position: relative;
-            padding: 5px 0;
-        }
-        header .mainMenu .menu .nav-link::after{
-            content: '';
-            height: 2px;
-            width: 0%;
-            position: absolute;
-            bottom: 0;
-            background: #000;
-            right: 0;
-            transition: .3s ease;
-        }
-        header .mainMenu .menu .nav-link:hover::after{
-            width: 100%;
-            left: 0;right: auto;
-        }
-        
-        @media (max-width:1200px){
-            header .mainMenu{
-                padding: 15px;
-            }
-            header .mainMenu .menu .logo{
-                padding: 10px 20px;
-            }
-            header .mainMenu .menu .nav-item{
-                padding: 0 15px;
-            }
-            header .mainMenu .menu .rightPart,
-            header .mainMenu .menu .leftPart{
-                width: 296px;
-            }
-        }
-        @media (max-width:991px){
-            header .mainMenu{
-                padding: 10px 15px;
-            }
-            header .mainMenu .menu ul{
-                display: none;
-            }
-            header .mainMenu .menu .logo{
-                padding: 5px 20px;
-            }
-            header .mainMenu .menu .logo img{
-                width: 120px;
-            }
-        }
-        @media (max-width:768px){
-            header .headertop p{
-                font-size: 12px;
-            }
-        }
-        @media (max-width:500px){
-            header .headertop p{
-                font-size: 9px;
-            }
-        }
-        header .mobile-menu{
-            position: fixed;
-            height: 100vh;
-            width: 300px;
-            background: #fff;
-            z-index: 9999;
-            top: 0;
-            left: -300px;
-            transition: .3s ease;
-        }
-        header .mobile-menu.active{
-            left: 0;
-        }
-        header .mobile-menu .nav{
-            flex-direction: column;
-            margin-top: 60px;
-            border-top: 1px solid #e9e9e9;
-        }
-        header .mobile-menu .nav li a{
-            padding: 15px 20px;
-            font-size: 15px;
-            letter-spacing: 2px;
-            font-weight: bold;
-            border-bottom: 1px solid #e9e9e9;
-            color: #000;
-        }
-        header .mobile-menu .close{
-            font-size: 15px;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            position: absolute;
-            right: 10px;
-            top: 15px;
-            cursor: pointer;
-        }
-        .menu-bg{
-            position: fixed;
-            width: 100%;height: 100%;
-            display: block;
-            background: rgba(255,255,255,.6);
-            z-index: -9991;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity .4s ease;
-        }
-        .menu-bg.active{
-            pointer-events: all;
-            opacity: 1;
-            z-index: 9991;
-        }
+
 
 /*Swiper*/
 .colfix {
@@ -313,7 +121,6 @@ header .headertop{
 .swiper-button i {
     display: none;
 }
-
 
 /*Product item Details design*/
 .productDetails {
@@ -1237,6 +1044,10 @@ footer .socialIcon a img {
         height: auto;
     }
 
+
+    /*Collection Section*/
+
+
     .container {
         padding: 0 20px;
     }
@@ -1459,7 +1270,6 @@ footer .socialIcon a img {
 }
 
 @media (max-width:1200px) {
- 
     .collectionItem .collectionTop .img .overlay p {
         font-size:
     }
@@ -1497,7 +1307,7 @@ footer .socialIcon a img {
     }
 
     .onTreePlanet .innerItem .planterDetails img {
-/*        height: 70px;*/
+        height: 70px;
         width: auto;
 
     }
@@ -1521,7 +1331,6 @@ footer .socialIcon a img {
 }
 
 @media (max-width:991px) {
-    
     .productItemDetails {
         margin: 0;
         margin-top: 20px;
@@ -1540,12 +1349,6 @@ footer .socialIcon a img {
         padding-right: 15px;
     }
 
-    
-
-    
-    
-    
-/*    Product  */
     .collectionIncluded .sectionTitle {
         padding-top: 0;
     }
@@ -1598,9 +1401,6 @@ footer .socialIcon a img {
 }
 
 @media (max-width:768px) {
-    .productDetails{
-        padding-top: 0;
-    }
     .container {
         max-width: 100%;
         padding: 0 !important;
@@ -1794,8 +1594,6 @@ footer .socialIcon a img {
 
     .swiper-button i {
         display: block;
-        line-height: 40px;
-        text-align: center;
     }
 
     .swiper-button:focus {
@@ -1847,7 +1645,7 @@ footer .socialIcon a img {
         font-size: 12px;
         margin-bottom: 0;
     }
-     
+
     .productItemDetails {
         margin-top: 0;
         padding: 25px 30px;
@@ -1969,8 +1767,7 @@ footer .socialIcon a img {
     }
 
     .productItemDetails .include .ratio p {
-        font-size: 8px;  
-        color: #747474;
+        font-size: 8px;
     }
 
     .productItemDetails .include ol li {

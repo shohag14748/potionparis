@@ -1,0 +1,1071 @@
+.heroSection {
+    background-image: url(../img/banner_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.heroSection .carouselContent {
+    padding: 140px 0 200px 56px;
+}
+
+.heroSection .carouselContent h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: 32px;
+}
+
+.heroSection .carouselContent h3 {
+    font-weight: 500;
+}
+
+.heroSection .carouselContent p {
+    max-width: 340px;
+    margin-top: 27px;
+    margin-bottom: 0;
+}
+
+.heroSection .carouselContent a {
+    color: #000;
+    background-color: #fff;
+    display: inline-block;
+    padding: 5px 70px 4px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 16px 0 20px;
+    text-transform: uppercase;
+
+}
+
+.heroSection .carouselContent .imgGroup {
+    display: flex;
+}
+
+.heroSection .carouselContent .imgGroup img {
+    height: 62px
+}
+
+.heroSection .carouselContent .imgGroup img:last-child {
+    height: 53px;
+    margin-left: 12px;
+}
+
+
+/*Collection Section*/
+.howItWork .sectionTitle {
+    padding: 20px 40px;
+    text-align: center;
+    background: #fff;
+}
+
+.howItWork .container {
+    padding-bottom: 60px;
+    max-width: 1250px
+}
+
+.howItWork {
+    background-color: #f9f8f6;
+}
+
+.howItWork .sectionDesc {
+    text-align: center;
+    padding: 40px 0 34px;
+}
+
+.howItWork .sectionDesc img {
+    width: 245px
+}
+
+.howItWork .sectionDesc h3 {
+    padding: 20px 0 15px;
+    margin-bottom: 0;
+}
+
+.howItWork .sectionDesc p {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.howItWork .row {
+    justify-content: center !important;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.howItWork .row .col-xl-3 {
+    padding: 10px
+}
+
+.workType {
+    height: 100%;
+    background-color: #fff;
+}
+
+.workType .workTop .img {
+    position: relative;
+    overflow: hidden;
+}
+
+.workType .workTop img {
+    width: 100%;
+}
+
+
+.workType .workText {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 20px 15px;
+}
+
+.workType .workText h5 {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.workType .workText p {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px
+}
+
+.mostPropular {
+    text-align: center;
+    padding: 60px 0 90px;
+}
+
+.mostPropular.bottom {
+    text-align: center;
+    padding: 65px 0;
+}
+
+.mostPropular .sectionTitle {
+    margin-bottom: 30px;
+}
+
+.mostPropular .row {
+    margin-left: -10px;
+    margin-right: -10px;
+    justify-content: center;
+}
+
+.mostPropular .row .col-xl-4 {
+    padding: 10px
+}
+
+.mostPropular .imgBoxMain img {
+    width: 100%;
+}
+
+.mostPropular .detailBox {
+    background-color: #f4f4f4;
+}
+
+.mostPropular .detailBox .title {
+    padding: 15px 15px 5px
+}
+
+.mostPropular .detailBox .title h4 {
+    margin-bottom: 2px;
+    font-size: 17px;
+}
+
+.mostPropular .detailBox .title h5 {
+    font-size: 13px;
+    font-weight: 900
+}
+
+.mostPropular .detailBox .ratingPricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 8px;
+}
+
+.mostPropular .detailBox .ratingPricing .rating .iconBox {
+    display: flex;
+    justify-content: center;
+}
+
+.mostPropular .detailBox .ratingPricing .rating .iconBox img {
+    height: 19px;
+}
+
+.mostPropular .detailBox .ratingPricing .rating p {
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+.mostPropular .detailBox .ratingPricing .pricing h5 {
+    color: #902929;
+    font-size: 19px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.mostPropular .detailBox .ratingPricing .pricing h5 del {
+    color: #949494;
+    margin-right: 3px;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.mostPropular .detailBox .ratingPricing .pricing p {
+    font-size: 11px;
+    margin-top: 0px;
+    color: #902929;
+    text-align: right
+}
+
+.mostPropular .detailBox .productInclude {
+    background-color: #d8d8d8;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.mostPropular .detailBox .productInclude .imgBox {
+    width: 28%;
+}
+
+.mostPropular .detailBox .productInclude .imgBox img {
+    */ display: block;
+    max-width: 90%;
+    max-height: 38px;
+    margin: auto;
+}
+
+.mostPropular .detailBox .productInclude .imgBox p {
+    font-size: 10px;
+    color: #747474;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.mostPropular .detailBox .productInclude .detail {
+    margin-left: 25px;
+    margin-bottom: 0;
+    width: calc((100% - 28%) - 25px);
+}
+
+.mostPropular .detailBox .productInclude ol.detail li {
+    font-size: 10px;
+}
+
+.homeTreePlanet .container-fluid {
+    padding: 0;
+}
+
+.homeTreePlanet .innerItem .planterDetails {
+    background-color: rgba(105, 84, 64, .7);
+    width: 50%;
+    margin-left: auto;
+    padding: 130px 0px 110px 90px;
+}
+
+.homeTreePlanet .innerItem .planterDetails img {
+    width: 100%;
+    /*    max-width: 360px;*/
+}
+    .homeTreePlanet .imageDisplay{
+        display: none;
+        width: 100%;
+    }
+.homeCollection {
+    padding-top: 50px;
+    background-color: #fff;
+}
+
+.homeCollection .collectionText {
+    background-color: #f4f4f4;
+    padding-bottom: 12px;
+}
+
+.homeCollection .sectionTitle {
+    background-color: transparent;
+    padding-bottom: 0;
+
+}
+
+.homeCollection .sectionTitle h1 {
+    margin-bottom: 0;
+}
+
+.homeCollection .sectionDesc h5 {
+    font-size: 19px;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+
+.homeCollection .sectionDesc {
+    padding-top: 0px;
+    margin-bottom: 35px
+}
+
+
+.homeCollection .ratingPricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 8px;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+.homeCollection .ratingPricing .rating .iconBox {
+    display: flex;
+    justify-content: center;
+}
+
+.homeCollection .ratingPricing .rating .iconBox img {
+    height: 20px;
+}
+
+.homeCollection .ratingPricing .rating p {
+    font-size: 12px;
+    margin-top: 3px;
+    color: #747474;
+}
+
+
+.homeCollection .ratingPricing .pricing {
+    padding: 10px 15px 30px
+}
+
+.homeCollection .ratingPricing .pricing h5 {
+    color: #c81b1b;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.homeCollection .ratingPricing .pricing h5 del {
+    color: #949494;
+    margin-right: 3px;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.homeCollection .ratingPricing .pricing p {
+    font-size: 11px;
+    margin-top: 0px;
+    color: #c81b1b;
+    text-align: center;
+}
+
+
+@media (min-width:1500px) {
+
+
+    .heroSection .carouselContent {
+        padding: 180px 0 210px 90px;
+    }
+
+    .heroSection .carouselContent h1 {
+
+        font-size: 42px;
+    }
+
+    .heroSection .carouselContent h3 {
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .heroSection .carouselContent p {
+        max-width: 500px;
+        margin-top: 37px;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .heroSection .carouselContent a {
+        padding: 10px 80px 8px;
+        font-size: 28px;
+        margin: 26px 0 30px;
+
+    }
+
+    .heroSection .carouselContent .imgGroup img {
+        height: 82px
+    }
+
+    .heroSection .carouselContent .imgGroup img:last-child {
+        height: 72px;
+    }
+
+    .howItWork .container {
+        max-width: 1600px;
+    }
+
+    /*Collection Section*/
+    .howItWork .sectionTitle {
+        padding: 30px 50px;
+    }
+
+    .howItWork .sectionDesc {
+        padding: 50px 0 44px;
+    }
+
+    .howItWork .sectionDesc img {
+        width: 285px
+    }
+
+    .howItWork .sectionDesc h3 {
+        padding: 30px 0 25px;
+    }
+
+    .howItWork .sectionDesc p {
+        max-width: 1230px;
+    }
+
+    .howItWork .row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .howItWork .row .col-xl-3 {
+        padding: 20px
+    }
+
+    .workType .workText {
+        padding: 30px 30px 25px;
+    }
+
+    .workType .workText h5 {
+        font-size: 24px;
+    }
+
+    .workType .workText p {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 25px
+    }
+
+    .mostPropular {
+        padding: 70px 0 100px;
+    }
+
+    .mostPropular.bottom {
+        padding: 75px 0;
+    }
+
+    .mostPropular .sectionTitle {
+        margin-bottom: 40px;
+    }
+
+    .mostPropular .row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .mostPropular .row .col-xl-4 {
+        padding: 20px
+    }
+
+    .mostPropular .detailBox .title {
+        padding: 25px 25px 15px
+    }
+
+    .mostPropular .detailBox .title h4 {
+        margin-bottom: 10px;
+        font-size: 27px;
+    }
+
+    .mostPropular .detailBox .title h5 {
+        font-size: 23px;
+    }
+
+    .mostPropular .detailBox .ratingPricing {
+        padding: 0 30px;
+        margin-bottom: 18px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .rating .iconBox img {
+        height: 25px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .rating p {
+        font-size: 16px;
+        margin-top: 13px;
+    }
+
+
+    .mostPropular .detailBox .ratingPricing .pricing h5 {
+        font-size: 27px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .pricing h5 del {
+        margin-right: 13px;
+        font-size: 24px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .pricing p {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+
+    .mostPropular .detailBox .productInclude {
+        ;
+        padding: 20px 30px;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox {
+        width: 35%;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox img {
+        max-width: 90%;
+        max-height: 48px;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .mostPropular .detailBox .productInclude .detail {
+        margin-left: 35px;
+        width: calc((100% - 35%) - 35px);
+    }
+
+    .mostPropular .detailBox .productInclude ol.detail li {
+        font-size: 13px;
+    }
+
+    .homeTreePlanet .container-fluid {
+        padding: 0;
+    }
+
+    .homeTreePlanet .innerItem .planterDetails {
+        padding: 140px 0px 120px 100px;
+    }
+
+    .homeCollection {
+        padding-top: 60px;
+    }
+
+    .homeCollection .collectionText {
+        padding-bottom: 22px;
+    }
+
+    .homeCollection .sectionDesc h5 {
+        font-size: 24px;
+        margin-top: 28px;
+        margin-bottom: 25px;
+    }
+
+    .homeCollection .sectionDesc {
+        margin-bottom: 45px;
+    }
+
+
+
+    .homeCollection .ratingPricing .rating .iconBox img {
+        height: 23px;
+    }
+
+    .homeCollection .ratingPricing .rating p {
+        font-size: 15px;
+        margin-top: 6px;
+    }
+
+
+    .homeCollection .ratingPricing .pricing {
+        padding: 16px 15px 40px
+    }
+
+    .homeCollection .ratingPricing .pricing h5 {
+        font-size: 26px;
+    }
+
+    .homeCollection .ratingPricing .pricing h5 del {
+
+        margin-right: 8px;
+        font-size: 22px;
+    }
+
+    .homeCollection .ratingPricing .pricing p {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+
+}
+
+@media (max-width:1200px) {
+
+
+    .heroSection .carouselContent {
+        padding: 70px 0 90px 30px;
+    }
+
+    .heroSection .carouselContent h1 {
+        font-size: 26px;
+    }
+
+    .heroSection .carouselContent h3 {
+        font-size: 22px;
+    }
+
+    .heroSection .carouselContent p {
+        font-size: 16px;
+    }
+
+    .heroSection .carouselContent a {
+        padding: 5px 60px 4px;
+    }
+
+    .heroSection .carouselContent .imgGroup img {
+        height: 56px
+    }
+
+    .heroSection .carouselContent .imgGroup img:last-child {
+        height: 48px
+    }
+
+    /*Collection Section*/
+
+
+
+    .howItWork .row .col-xl-3 {
+        padding: 15px
+    }
+
+    .howItWork .sectionDesc p {
+        padding: 0 15px
+    }
+
+    .workType .workText {
+        padding: 30px 30px 25px;
+    }
+
+    .workType .workText h5 {
+        font-size: 24px;
+    }
+
+    .workType .workText p {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 25px
+    }
+
+    .mostPropular {
+        padding: 70px 0 100px;
+    }
+
+
+
+    .mostPropular .row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .mostPropular .row .col-xl-4 {
+        padding: 20px
+    }
+
+    .mostPropular .detailBox .title {
+        padding: 25px 25px 15px
+    }
+
+    .mostPropular .detailBox .title h4 {
+        margin-bottom: 10px;
+        font-size: 27px;
+    }
+
+    .mostPropular .detailBox .title h5 {
+        font-size: 23px;
+    }
+
+    .mostPropular .detailBox .ratingPricing {
+        padding: 0 30px;
+        margin-bottom: 18px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .rating .iconBox img {
+        height: 25px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .rating p {
+        font-size: 16px;
+        margin-top: 13px;
+    }
+
+
+    .mostPropular .detailBox .ratingPricing .pricing h5 {
+        font-size: 27px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .pricing h5 del {
+        margin-right: 13px;
+        font-size: 24px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .pricing p {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+
+    .mostPropular .detailBox .productInclude {
+        ;
+        padding: 20px 30px;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox {
+        width: 35%;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox img {
+        max-width: 90%;
+        max-height: 48px;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .mostPropular .detailBox .productInclude .detail {
+        margin-left: 35px;
+        width: calc((100% - 35%) - 35px);
+    }
+
+    .mostPropular .detailBox .productInclude ol.detail li {
+        font-size: 12px;
+    }
+
+
+    .homeTreePlanet .innerItem .planterDetails {
+        padding: 80px 40px 60px 50px;
+    }
+
+
+    .homeCollection .sectionDesc {
+        margin-bottom: 15px;
+    }
+
+
+
+    .homeCollection .ratingPricing .rating p {
+        font-size: 15px;
+        margin-top: 6px;
+    }
+
+
+    .homeCollection .ratingPricing .pricing {
+        padding: 16px 15px 40px
+    }
+
+    .homeCollection .ratingPricing .pricing h5 {
+        font-size: 26px;
+    }
+
+    .homeCollection .ratingPricing .pricing h5 del {
+
+        margin-right: 8px;
+        font-size: 22px;
+    }
+
+    .homeCollection .ratingPricing .pricing p {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+}
+
+@media (max-width:991px) {
+
+    .heroSection .carouselContent {
+        padding: 40px 0 60px 0px;
+    }
+
+    .heroSection .carouselContent h1 {
+        font-size: 22px;
+    }
+
+    .heroSection .carouselContent h3 {
+        font-size: 18px;
+    }
+
+    .heroSection .carouselContent p {
+        font-size: 14px;
+        max-width: 290px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .heroSection .carouselContent a {
+        padding: 5px 41px 4px;
+    }
+
+    .heroSection .carouselContent .imgGroup img {
+        height: 46px
+    }
+
+    .heroSection .carouselContent .imgGroup img:last-child {
+        height: 40px
+    }
+
+    .howItWork .sectionTitle h1 {
+
+        font-size: 26px;
+    }
+
+    .howItWork .sectionTitle {
+        padding: 10px 20px;
+    }
+
+    .howItWork .sectionDesc img {
+        width: 220px
+    }
+
+    .howItWork .row .col-xl-3 {
+        padding: 15px
+    }
+
+    .mostPropular {
+        padding: 50px 0 60px;
+    }
+
+    .mostPropular .sectionTitle {
+        margin-bottom: 20px
+    }
+
+    .mostPropular .row .col-xl-4 {
+        padding: 15px
+    }
+
+    .mostPropular .detailBox .title {
+        padding: 15px 15px 5px
+    }
+
+    .mostPropular .detailBox .title h4 {
+        margin-bottom: 3px;
+        font-size: 16px;
+    }
+
+    .mostPropular .detailBox .title h5 {
+        font-size: 14px;
+    }
+
+    .mostPropular .detailBox .ratingPricing {
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .rating .iconBox img {
+        height: 16px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .rating p {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+
+
+    .mostPropular .detailBox .ratingPricing .pricing h5 {
+        font-size: 18px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .pricing h5 del {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .mostPropular .detailBox .ratingPricing .pricing p {
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .mostPropular .detailBox .productInclude {
+        ;
+        padding: 10px;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox {
+        width: 28%;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox img {
+        max-width: 90%;
+        max-height: 30px;
+    }
+
+    .mostPropular .detailBox .productInclude .imgBox p {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .mostPropular .detailBox .productInclude .detail {
+        margin-left: 20px;
+        width: calc((100% - 28%) - 20px);
+    }
+
+    .mostPropular .detailBox .productInclude ol.detail li {
+        font-size: 11px;
+    }
+
+    .homeTreePlanet .innerItem .planterDetails {
+        padding: 50px 40px;
+    }
+
+    .homeTreePlanet .innerItem .planterDetails h2 {
+        font-size: 20px;
+    }
+
+    .onTreePlanet .innerItem .planterDetails p {
+        font-size: 14px;
+        line-height: 22px
+    }
+
+    .homeTreePlanet .innerItem .planterDetails .planetLogoBox {
+        width: 80%;
+    }
+    .homeTreePlanet .innerItem .planterDetails .planetLogoBox img{
+        max-width: 100%;
+        width: 100% !important;
+    }
+
+    .howItWork .sectionDesc h3 {
+        font-size: 20px;
+    }
+
+    .homeCollection .sectionTitle h1 {
+        font-size: 28px;
+    }
+
+    .workType .workText {
+        padding: 20px;
+    }
+
+    .workType .workText h5 {
+        font-size: 22px;
+    }
+
+    .workType .workText p {
+        font-size: 16px;
+        margin-top: 16px
+    }
+}
+
+@media (max-width:768px) {
+
+    .container {
+        max-width: 100%;
+        overflow: hidden;
+        padding: 20px !important;
+    }
+
+    .howItWork .container {
+        padding-bottom: 50px !important;
+    }
+
+    .howItWork .row .col-xl-3 {
+        padding: 10px;
+    }
+
+    .mostPropular {
+        padding: 10px 0 20px;
+    }
+
+    .mostPropular.bottom {
+        padding: 20px 0;
+    }
+
+    .mostPropular .row .col-xl-4 {
+        padding: 20px;
+    }
+
+    .mostPropular .detailBox .ratingPricing {
+        padding: 0 20px;
+    }
+
+    .mostPropular .detailBox .productInclude {
+        padding: 10px 20px
+    }
+
+    .homeCollection .container{
+        padding: 0 !important;
+    }
+    .homeCollection .sectionTitle{
+        margin-top: 20px;
+    }
+    .homeCollection .sectionDesc h5 {
+        margin-top: 0;
+    }
+    .homeCollection .row {
+        margin-left: -10px;
+        margin-right: -10px
+    }
+    .homeCollection .row .col-xl-3{
+        padding:0px 5px;
+    }
+    .homeTreePlanet .innerItem .planterDetails{
+        width: 100%;
+        background-color: rgba(105, 84, 64,1);
+    }
+    .homeTreePlanet .imageDisplay{
+        display: block;
+        width: 100%;
+    }
+    .onTreePlanet .innerItem .planterDetails img{
+        display: inline;
+    }
+    
+}
+
+@media (max-width:500px) {
+    
+    .heroSection .carouselContent{
+        text-align: center;
+    }
+    .heroSection .carouselContent p{
+        margin: auto;
+    }
+    .heroSection .carouselContent .imgGroup{
+        justify-content: center;
+    }
+    .howItWork .sectionTitle h1{
+        font-size: 20px;
+    }
+    .howItWork .sectionDesc h3{
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    .workType .workText h5{
+        font-size: 18px;
+    }
+    .workType .workText p{
+        font-size: 12px
+    }
+    .mostPropular .sectionTitle h3{
+        margin-bottom: -10px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .homeCollection .container{
+        padding: 20 !important;
+    }
+    .homeCollection .sectionTitle{
+        margin-top: 20px;
+    }
+    .homeCollection .sectionDesc h5 {
+        margin-top: 10px;
+    }
+    .homeCollection .row {
+        margin-left: 10px;
+        margin-right: 10px
+    }
+    .homeCollection .row .col-xl-3{
+        padding:10px;
+    }
+    
+}
