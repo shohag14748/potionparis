@@ -229,6 +229,7 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    min-height: 80px;
 }
 
 .mostPropular .detailBox .productInclude .imgBox {
@@ -513,7 +514,7 @@
     }
 
     .mostPropular .detailBox .productInclude {
-        ;
+        min-height: 116px;
         padding: 20px 30px;
     }
 
@@ -1050,41 +1051,35 @@
 
     .heroSection .carouselContent p{
         margin-top: 10px;font-size: 13px;
-        max-width: 280px;
         margin-bottom: 10px;
+        width: 75%;
     }
     .heroSection .carouselContent a {
     padding: 5px 30px 4px;
         font-size: 16px;
         margin: 0px;
-        margin-left: 20px;
         margin-top: 10px;
 }
     .heroSection .carouselContent .imgGroup{
         position: absolute;
         bottom: 0;
-        justify-content: center;
         width: 100%;
         left: 0;
         padding: 12px 20px;
-        background-color: rgba(187,145,150,.69)
             
     }
     .heroSection .carouselContent .imgGroup img{
         height: 60px
     }
     .heroSection .carouselContent .imgGroup img:last-child{
-        height: 60px;
-        margin-left: 15px;
+        display: none;
     }
-    .topTextBgWB{
+    .topTextBg{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-    }
-    .topTextBg{
-        padding: 20px 20px 1px;
+        padding: 30px 20px 20px;
         background-color: rgba(187,145,150,.20);
     }
     
