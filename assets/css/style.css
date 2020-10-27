@@ -786,6 +786,9 @@ font-size: 19px !important;
     margin-bottom: 25px;
 }
 
+.reviews .container img {
+    width: 20px;
+}
 .reviews .container p.author {
     margin-top: 30px;
     margin-bottom: 0;

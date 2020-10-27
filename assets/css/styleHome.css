@@ -316,7 +316,6 @@
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    margin-bottom: 8px;
     flex-direction: column;
     background-color: #f4f4f4;
 }
@@ -328,6 +327,7 @@
 
 .homeCollection .ratingPricing .rating .iconBox img {
     height: 20px;
+        padding: 0 1px;
 }
 
 .homeCollection .ratingPricing .rating p {
@@ -342,7 +342,7 @@
 }
 
 .homeCollection .ratingPricing .pricing h5 {
-    color: #c81b1b;
+    color: #902929;
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 0;
@@ -358,7 +358,7 @@
 .homeCollection .ratingPricing .pricing p {
     font-size: 11px;
     margin-top: 0px;
-    color: #c81b1b;
+    color: #902929;
     text-align: center;
 }
 
@@ -963,15 +963,19 @@
     .container {
         max-width: 100%;
         overflow: hidden;
-        padding: 20px !important;
+        padding: 15px !important;
     }
 
     .howItWork .container {
         padding-bottom: 50px !important;
     }
 
+    .howItWork .row{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
     .howItWork .row .col-xl-3 {
-        padding: 10px;
+        padding: 5px;
     }
 
     .mostPropular {
@@ -983,7 +987,7 @@
     }
 
     .mostPropular .row .col-xl-4 {
-        padding: 20px;
+        padding: 5px 15px !important;
     }
 
     .mostPropular .detailBox .ratingPricing {
@@ -995,7 +999,7 @@
     }
 
     .homeCollection .container{
-        padding: 0 !important;
+/*        padding: 0 !important;*/
     }
     .homeCollection .sectionTitle{
         margin-top: 20px;
@@ -1114,7 +1118,7 @@
     }
     
     .homeCollection .container{
-        padding: 20 !important;
+        padding: 15px !important;
     }
     .homeCollection .sectionTitle{
         margin-top: 20px;
@@ -1123,8 +1127,8 @@
         margin-top: 10px;
     }
     .homeCollection .row {
-        margin-left: 10px;
-        margin-right: 10px
+/*        margin-left: 10px;*/
+/*        margin-right: 10px*/
     }
     .homeCollection .row .col-xl-3{
         padding: 5px;
