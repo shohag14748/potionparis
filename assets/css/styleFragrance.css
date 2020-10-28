@@ -123,6 +123,7 @@
 .eachItems .innerContent .itemBox .innerItem .itemText p {
     font-size: 10px;
     font-weight: 500;
+    padding-bottom: 1px;
 }
 
 .eachItems .innerContent .itemBox .innerItem .itemText p del {
@@ -255,7 +256,8 @@
 @media (max-width:991px) {
     .eachItems .innerContent {
         background-position: bottom right;
-        background-size: 100%;
+/*        background-size: 100%;*/
+        background-size: auto 205px;
     }
 
     .eachItems .innerContent {
@@ -298,6 +300,10 @@
     }
 }
 @media(max-width:576px) {
+        .eachItems .innerContent {
+        background-position: bottom right;
+        background-size: calc(143vw);
+    }
     .eachItems .container {
         padding: 10px !important;
     }
