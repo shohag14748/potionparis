@@ -302,7 +302,7 @@
 @media(max-width:576px) {
         .eachItems .innerContent {
         background-position: bottom right;
-        background-size: calc(144vw);
+        background-size: calc(143.5vw);
     }
     .eachItems .container {
         padding: 10px !important;
