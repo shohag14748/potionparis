@@ -333,3 +333,9 @@
 }
 }
 
+@media(max-width:400px) {
+        .eachItems .innerContent {
+        background-position: bottom right;
+        background-size: calc(150vw);
+    }
+}
