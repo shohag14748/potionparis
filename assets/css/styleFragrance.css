@@ -328,5 +328,8 @@
     .rosePeony{
         margin-bottom: 10px;
     }
+    .eachItems .innerContent .itemBox .innerItem .itemText p {
+    padding-bottom: 2px !important;
+}
 }
 
