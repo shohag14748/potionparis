@@ -131,6 +131,43 @@
 }
 
 
+
+/* Background Image Change */
+.peonyNutmeg{
+    margin-top: 40px;
+}
+.rosePeony{
+    margin-bottom: 40px;
+}
+.peonyNutmeg .innerContent{
+    background-color: #f5f5f5;
+    background-image: url(../img/peone_bg.jpg);
+}
+.vanillaMusk .innerContent{
+    background-color: #f9f9fa;
+    background-image: url(../img/vanilla_bg.jpg);
+}
+.jasminePatchouli .innerContent{
+    background-color: #efefef;
+    background-image: url(../img/jasmine_bg.jpg);
+}
+.whiteFlower .innerContent{
+    background-color: #f5f5f5;
+    background-image: url(../img/whiteFlower_bg.jpg);
+}
+.amberPraline .innerContent{
+    background-color: #f5f5f5;
+    background-image: url(../img/ambar_bg.jpg);
+}
+.preciousOud .innerContent{
+    background-color: #f5f5f4;
+    background-image: url(../img/precious_bg.jpg);
+}
+.rosePeony .innerContent{
+    background-color: #f5f5f5;
+    background-image: url(../img/rose_bg.jpg);
+}
+
 @media (min-width:1500px) {
 
     .eachItems .innerContent {
@@ -279,41 +316,11 @@
         padding: 5px;
         margin-right: 0;
     }
+    .peonyNutmeg{
+        margin-top: 10px;
+    }
+    .rosePeony{
+        margin-bottom: 10px;
+    }
 }
 
-
-/* Background Image Change */
-.peonyNutmeg{
-    margin-top: 40px;
-}
-.peonyNutmeg .innerContent{
-    background-color: #f5f5f5;
-    background-image: url(../img/peone_bg.jpg);
-}
-.vanillaMusk .innerContent{
-    background-color: #f9f9fa;
-    background-image: url(../img/vanilla_bg.jpg);
-}
-.jasminePatchouli .innerContent{
-    background-color: #efefef;
-    background-image: url(../img/jasmine_bg.jpg);
-}
-.whiteFlower .innerContent{
-    background-color: #f5f5f5;
-    background-image: url(../img/whiteFlower_bg.jpg);
-}
-.amberPraline .innerContent{
-    background-color: #f5f5f5;
-    background-image: url(../img/ambar_bg.jpg);
-}
-.preciousOud .innerContent{
-    background-color: #f5f5f4;
-    background-image: url(../img/precious_bg.jpg);
-}
-.rosePeony .innerContent{
-    background-color: #f5f5f5;
-    background-image: url(../img/rose_bg.jpg);
-}
-.rosePeony{
-    margin-bottom: 40px;
-}
